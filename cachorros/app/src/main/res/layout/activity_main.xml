@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/et_cachorro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/id_primeiro_cachorro"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_cachorro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/id_segundo_cachorro"
+        app:layout_constraintTop_toBottomOf="@id/et_cachorro1"
+        android:inputType="number"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/bt_comprar_cachorros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comprar_cachorros"
+        app:layout_constraintTop_toBottomOf="@id/et_cachorro2"
+        android:layout_marginTop="20dp"
+        android:onClick="comprar"/>
+
+    <ImageView
+        android:id="@+id/iv_cachorro1"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:src="@drawable/dog_feliz1"
+        app:layout_constraintTop_toBottomOf="@id/bt_comprar_cachorros" />
+
+    <ImageView
+        android:id="@+id/iv_cachorro2"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:src="@drawable/dog_feliz2"
+        app:layout_constraintTop_toBottomOf="@id/bt_comprar_cachorros"
+        app:layout_constraintLeft_toRightOf="@id/iv_cachorro1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
